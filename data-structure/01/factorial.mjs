@@ -13,7 +13,7 @@ console.log(`factorial -> ${factorial(5)}`);
 
 //재귀함수 이용한 팩토리얼 - 하향식 계산 방법
 
-function factorial1(number){
+const factorial2 = (number) => {
     if(number == 1) return;
-    return number* factorial1(number - 1);
+    return number* factorial2(number - 1);
 }

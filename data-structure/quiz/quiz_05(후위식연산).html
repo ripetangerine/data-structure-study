@@ -7,24 +7,24 @@
             function solution(s){
                let stack = []
             //    stack.splice
-               for(let i=0; i<=s.length; i++){
+                for(let i=0; i<=s.length; i++){
                     let elem = s[i];
                     if(elem == '+' || elem == '-' || elem == '*' || elem == '/'){
-                         let num1 = Number(stack.pop());
-                         let num2 = Number(stack.pop());
-                         switch(elem){
-                              case "+": stack.push(num2+num1); break;
-                              case "-": stack.push(num2-num1); break;
-                              case "/": stack.push((num2/num1)); break; 
-                              case "*": stack.push(num2*num1); break;
-                         }
-	               }
+                        let num1 = Number(stack.pop());
+                        let num2 = Number(stack.pop());
+                        switch(elem){
+                            case "+": stack.push(num2+num1); break;
+                            case "-": stack.push(num2-num1); break;
+                            case "/": stack.push((num2/num1)); break; 
+                            case "*": stack.push(num2*num1); break;
+                        }
+	                }
                     else{
-                         stack.push(elem);
+                        stack.push(elem);
                     }
-               }
-               stack.pop();
-               return stack.pop();
+                }
+                stack.pop();
+                return stack.pop();
             }
             console.log(solution('352+*9-'))
             console.log(solution('35-7*62/+'))
