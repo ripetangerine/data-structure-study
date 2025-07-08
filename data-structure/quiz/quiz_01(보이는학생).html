@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>document</title>
+    </head>
+    <body>
+        <script>
+            function solution(){
+                let answer = 0;
+                let max = 0
+                let arrQueue = [130, 135, 148, 140, 145, 150, 150, 155];
+
+                arrQueue.forEach(element => {
+                    if(element > max){
+                        max = element
+                        answer ++;
+                    }
+                });
+
+                return answer;
+            }
+            console.log(solution())
+        </script>
+    </body>
+</html>

@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>교육과정 설계</title>
+    </head>
+    <body>
+        <script>
+               function solution(need, plan){
+                    let answer;
+                    let need_q = need.split("");
+                    let plan_q = plan.split("");
+                    
+                    let need_index = 0;
+                    let plan_index = 0;
+
+                    for(let x of plan_q){
+                         console.log(`${x} : ${need_q}`)
+                         if(x == need_q[need_index] ){
+                              need_q.shift();
+                              need_index++;
+                         }
+                         if(need_q.length <= 0) break;
+                    }
+
+
+                    console.log(need_q)
+                    return need_q.length?"NO":"YES";
+               }
+               let a = "CBA";
+               let b = "CBDAGE";
+               console.log(solution(a, b))
+        </script>
+    </body>
+</html>

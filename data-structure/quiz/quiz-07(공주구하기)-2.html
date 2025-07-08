@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>큐를 이용한 공주 구하기</title>
+    </head>
+    <body>
+        <script>
+          function solution(N, K){
+               let answer;
+               let queue = [];
+               let princeCount = N;
+               
+               // 왕자 큐에 넣기
+               for(let i=0; i<N; i++){
+                    queue.shift(i+1)
+               }
+
+               // 큐 탐색 
+               // 왕자 선별
+               let index = 0;
+               while(princeCount != 1){
+                    //왕자 잡힘
+                    if(index === K-1){
+                         queue.unshift(queue[index]);
+                         index = 0;
+                         princeCount--;
+                    }
+                    else{
+                         queue.shift(queue[index++]);
+                    }
+               }
+
+               return queue;
+            }
+            console.log(solution(8, 3))
+        </script>
+    </body>
+</html>

@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>document</title>
+    </head>
+    <body>
+        <script>
+            let arr = [1, 0, 1, 1, 1, 0, 0, 1, 1, 0]
+
+            function solution(arr){
+                let answer = 0;
+                let defalutScore = 1, flag = 0;
+
+                for(let i = 0; i<arr.length; i++){
+                    if(arr[i] === 1){
+                        answer += defalutScore + flag++;
+                    }
+                    else{
+                        flag = 0;
+                    }
+                }
+
+                return answer;
+            }
+            console.log(solution(arr))
+        </script>
+
+        <script>
+
+            function solution(){
+                let answer = 0, cnt = 0;
+                for(let x of arr){
+                    if(x === 1){
+                        cnt ++;
+                        answer += cnt;
+                    }
+                    else
+                        cnt = 0;
+                }
+            }
+
+        </script>
+    </body>
+</html>

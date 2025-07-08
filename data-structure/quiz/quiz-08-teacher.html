@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>교육과정 설계</title>
+    </head>
+    <body>
+        <script>
+               function solution(need, plan){
+                    let answer;
+                    let queue = need.split("");
+
+                    for(let x of plan){
+                         if(queue.includes(x)){
+                              if(x!==queue.shift()){return answer="NO";}
+                         }
+                    }
+                    return queue.length>0? "NO" : "YES";
+               }
+               let a = "CBA";
+               let b = "CBDAGE";
+               console.log(solution(a, b))
+        </script>
+    </body>
+</html>

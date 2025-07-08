@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>document</title>
+    </head>
+    <body>
+        <script>
+
+            let a = "()()()"
+            
+            function solution(a){
+                let stack = [];
+
+                for(let i=0; i<a.length; i++){
+                    let target = a.charAt(i);
+
+                    if(target === "("){
+                        console.log("1");
+                        stack.push(1)
+                    }
+                    else if(target === ")"){
+                        console.log("0");
+                        stack.pop()
+                    }
+                }
+                //조건문 문제
+                if(stack.length == 0)
+                    return "YES"
+                else
+                    return "NO"
+
+            }
+            console.log(solution(a))
+        </script>
+
+        <script>
+
+            function solution(){
+                let answer = 0, cnt = 0;
+                for(let x of arr){
+                    if(x === 1){
+                        cnt ++;
+                        answer += cnt;
+                    }
+                    else
+                        cnt = 0;
+                }
+            }
+
+        </script>
+    </body>
+</html>
